@@ -1,0 +1,62 @@
+.optionsGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.optionPill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border-radius: 999px;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  color: var(--color-ink-soft);
+  font-size: 14px;
+  cursor: pointer;
+  user-select: none;
+  transition: border-color 0.15s ease, background 0.15s ease, color 0.15s ease;
+}
+
+.optionPill:hover {
+  border-color: var(--color-beige-strong);
+}
+
+.optionPillSelected {
+  background: var(--color-ink);
+  border-color: var(--color-ink);
+  color: var(--color-bg);
+}
+
+.optionPill input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.checkIcon {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+}
+
+.extraField {
+  margin-top: 14px;
+}
+
+.extraInput {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  font-size: 14px;
+  color: var(--color-ink);
+}
+
+.extraInput:focus {
+  outline: none;
+  border-color: var(--color-ink);
+  box-shadow: 0 0 0 3px rgba(28, 26, 22, 0.06);
+}

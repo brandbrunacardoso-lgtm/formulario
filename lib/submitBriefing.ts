@@ -1,4 +1,4 @@
-import { supabase, BRIEFINGS_TABLE } from "./supabaseClient";
+import { getSupabase, BRIEFINGS_TABLE } from "./supabaseClient";
 import { uploadFieldFiles } from "./uploadFiles";
 import { steps } from "@/data/questions";
 import {
@@ -112,6 +112,7 @@ export async function submitBriefing(
       : `${Date.now()}-${Math.random().toString(36).slice(2)}`;
 
   try {
+    const supabase = getSupabase();
     const arquivos = await uploadAllFiles(briefingId, files);
     const respostas = buildRespostasPayload(answers);
 

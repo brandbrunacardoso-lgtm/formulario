@@ -1,4 +1,4 @@
-import { supabase, ANEXOS_BUCKET } from "./supabaseClient";
+import { getSupabase, ANEXOS_BUCKET } from "./supabaseClient";
 import { UploadedFileRef } from "@/types/briefing";
 
 /** Remove acentos/caracteres especiais para gerar um nome de arquivo seguro no Storage. */
@@ -20,6 +20,7 @@ export async function uploadFieldFiles(
   campoId: string,
   files: File[]
 ): Promise<UploadedFileRef[]> {
+  const supabase = getSupabase();
   const resultados: UploadedFileRef[] = [];
 
   for (let i = 0; i < files.length; i++) {

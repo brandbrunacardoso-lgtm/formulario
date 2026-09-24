@@ -1,44 +1,64 @@
-.optionsGrid {
+.optionsList {
   display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+  flex-direction: column;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--color-surface);
 }
 
-.optionPill {
-  display: inline-flex;
+.optionRow {
+  display: flex;
   align-items: center;
-  gap: 8px;
-  padding: 10px 16px;
-  border-radius: 999px;
-  border: 1px solid var(--color-border);
-  background: var(--color-surface);
-  color: var(--color-ink-soft);
-  font-size: 14px;
+  gap: 14px;
+  padding: 14px 16px;
   cursor: pointer;
   user-select: none;
-  transition: border-color 0.15s ease, background 0.15s ease, color 0.15s ease;
+  border-bottom: 1px solid var(--color-border);
+  transition: background 0.12s ease;
 }
 
-.optionPill:hover {
-  border-color: var(--color-beige-strong);
+.optionRow:last-child {
+  border-bottom: none;
 }
 
-.optionPillSelected {
-  background: var(--color-ink);
-  border-color: var(--color-ink);
-  color: var(--color-bg);
+.optionRow:hover {
+  background: var(--color-bg);
 }
 
-.optionPill input {
+.optionRow input {
   position: absolute;
   opacity: 0;
   pointer-events: none;
 }
 
-.checkIcon {
-  width: 14px;
-  height: 14px;
+.checkbox {
   flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  border: 1.5px solid var(--color-beige-strong);
+  background: var(--color-surface);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.12s ease, border-color 0.12s ease;
+}
+
+.checkboxChecked {
+  background: var(--color-ink);
+  border-color: var(--color-ink);
+}
+
+.checkIcon {
+  width: 12px;
+  height: 12px;
+}
+
+.optionText {
+  font-size: 14.5px;
+  color: var(--color-ink);
+  line-height: 1.4;
 }
 
 .extraField {
@@ -53,6 +73,10 @@
   background: var(--color-surface);
   font-size: 14px;
   color: var(--color-ink);
+}
+
+.extraInput::placeholder {
+  color: var(--color-muted);
 }
 
 .extraInput:focus {

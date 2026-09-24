@@ -81,19 +81,17 @@ export default function BriefingForm() {
     <div className={styles.page}>
       <div className={styles.container}>
         <header className={styles.header}>
-          <p className={styles.eyebrow}>Briefing de criação de site</p>
-          <h1 className={styles.title}>Vamos conhecer o seu projeto</h1>
+          <p className={styles.eyebrow}>vamos construir juntos o seu projeto</p>
+          <h1 className={styles.title}>Briefing de criação de site</h1>
           <p className={styles.subtitle}>
-            Responda com calma às perguntas abaixo. Nenhuma resposta é
-            obrigatória — preencha o que fizer sentido para o seu negócio.
+            Responda às perguntas abaixo com calma e conte tudo o que puder
+            sobre o seu negócio. Quanto mais detalhes você compartilhar,
+            melhor conseguiremos entender suas necessidades e criar algo
+            alinhado ao que você procura.
           </p>
         </header>
 
-        <StepIndicator
-          currentStep={currentStep}
-          totalSteps={TOTAL_STEPS}
-          stepTitle={step.title}
-        />
+        <StepIndicator currentStep={currentStep} totalSteps={TOTAL_STEPS} />
 
         <div className={styles.card}>
           <h2 className={styles.stepTitle}>{step.title}</h2>
